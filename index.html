@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endreash</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/eh.webp" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("RiJp6OMzAxsJ0ZccB");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page">
+    <nav>
+      <!-- <figure>
+        <img id="personal-logo" src="./assets/eh.webp" alt="">
+      </figure> -->
+      <!-- <span class="uppercase text-base-content">Endreas</span>
+      <span class="uppercase text-base-content">H</span> -->
+      <div class="text-primary">Endreas<span class="orange">H</span>
+      </div>
+      <!-- <a href="#" class="text-primary">Endreash</a> -->
+      <!-- <span class="uppercase text-base-content">H</span> -->
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hi</h1>
+        <!-- <span class="AboutSection__Wave-sc-3w0rd8-3 kCcWOg animate__animated animate__tada animate__infinite animate__slow animate__delay-2s">👋</span> -->
+        <!-- <span class="AboutSection__Wave">👋</span> -->
+        <h1 class="title orange">I'm Dre</h1>
+        <p class="header__para">
+          I'm a <b class="orange">Developer</b> with a strong passion for building web applications
+          with great user
+          experiences.
+          <br>
+          Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://github.com/Endreash" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/EndreasH CV.pdf" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about"></h4>
+        <p class="modal__para">
+          I'm a 22 year-old software engineer with experience developing
+          websites </b>
+          <br>
+          👀I’m interested in more of Frontend programming
+          <br>
+          Worked on React Native apps in the past
+          <br>
+          I’m currently learning Flutter and Node Js 
+          <br>
+          Currently developing Next Js apps  
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+            <span class="language__name">React</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Send me a Text!
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
+          I love to hear from you.
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          These are some of the project i enjoyed
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/pro1.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Netflixery Clone
+                </h3>
+                <h4 class="project__description--sub-title">
+                  JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  Designed and developed a movie web app which uses an api to fetch the movies when searched.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/Endreash/Netflixery-Clone" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/pro2.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Bettys Place
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, React, Firebase
+                </h4>
+                <p class="project__description--para">
+                  Currently developing an E-commerce web app in React which uses Firebase as a 
+                  backend for posting images 
+                </p>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Eportfolio YT.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS
+                </h4>
+                <p class="project__description--para">
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/Endreash" target="_blank"
+                    class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#"></a>
+        <div class="footer__social--list">
+          <a href="https://github.com/EndreasH" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://et.linkedin.com/in/endreas-haile-92a8241a4" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/EndreasH CV.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2023 EndreasH</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
